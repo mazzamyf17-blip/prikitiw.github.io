@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Queensha!</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Menghubungkan JavaScript -->
+    <script src="java.js" defer></script>
+</head>
+
+<body>
+
+    <div id="confettiContainer"></div>
+
+    <!-- MUSIK -->
+    <audio id="birthdayMusic" loop>
+        <source src="asset/lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" class="music-btn">🎵 Putar Musik</button>
+
+    <!-- PEMBUKA -->
+    <section id="opening" class="opening">
+        <div class="opening-card">
+            <div class="decoration">🎀 ✨ 🌷</div>
+            <p class="small-text">A special day for someone special</p>
+            <h1>Happy Birthday!</h1>
+            <h2>Queensha Islahul Azfa</h2>
+            <p>A little surprise has been prepared for you ♡</p>
+            <button id="startBtn" class="primary-btn">
+                Buka Hadiah ✨
+            </button>
+        </div>
+    </section>
+
+    <!-- KONTEN UTAMA -->
+    <main id="mainContent" class="hidden">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">♡ Queensha</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#messages">Messages</a>
+                <a href="#surprise">Surprise</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <span class="tag">A DAY TO REMEMBER ♡</span>
+                <h1>Happy Birthday,<br>
+                    <span>Queensha!</span>
+                </h1>
+                <p>
+                    Hari ini adalah hari spesial untuk seseorang
+                    yang juga spesial. Semoga semua hal baik
+                    selalu datang dalam hidupmu.
+                </p>
+                <a href="#gallery" class="primary-btn link-btn">
+                    Lihat Kenangan ↓
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="flower">🌷</div>
+                <div class="heart">♡</div>
+                <div class="sparkle">✦</div>
+                <div class="hero-circle">🎀</div>
+            </div>
+        </section>
+
+        <!-- QUOTE -->
+        <section class="quote-section">
+            <div class="quote-card">
+                <span>✧</span>
+                <h2>"May your days always be filled with happiness."</h2>
+                <p>A little wish for your special day.</p>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section">
+            <div class="section-heading">
+                <span>OUR LITTLE MOMENTS</span>
+                <h2>Photo Gallery 📸</h2>
+                <p>Beberapa foto untuk menghiasi hari spesialmu.</p>
+            </div>
+
+            <div class="gallery">
+                <button class="gallery-item" data-image="assets/foto1.jpg">
+                    <img src="assets/foto1.jpg.jpeg" alt="Foto kenangan 1">
+                    <span>♡</span>
+                </button>
+
+                <button class="gallery-item" data-image="assets/foto2.jpg">
+                    <img src="assets/foto2.jpg.jpeg" alt="Foto kenangan 2">
+                    <span>✿</span>
+                </button>
+
+                <button class="gallery-item" data-image="assets/foto3.jpg">
+                    <img src="assets/foto3.jpg.jpeg" alt="Foto kenangan 3">
+                    <span>♡</span>
+                </button>
+
+                <button class="gallery-item" data-image="assets/foto4.jpg">
+                    <img src="assets/foto4.jpg.jpeg" alt="Foto kenangan 4">
+                    <span>✧</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX -->
+        <div id="lightbox" class="lightbox hidden">
+            <button id="closeLightbox" class="close-btn">×</button>
+            <img id="lightboxImage" src="" alt="Foto diperbesar">
+        </div>
+
+        <!-- MESSAGES -->
+        <section id="messages" class="section messages-section">
+            <div class="section-heading">
+                <span>WORDS FOR YOU</span>
+                <h2>Little Messages 💌</h2>
+            </div>
+
+            <div class="message-grid">
+                <div class="message-card">
+                    <div>🌷</div>
+                    <h3>Stay Happy</h3>
+                    <p>Semoga kamu selalu menemukan alasan untuk tersenyum setiap harinya.</p>
+                </div>
+
+                <div class="message-card">
+                    <div>🦋</div>
+                    <h3>Keep Growing</h3>
+                    <p>Semoga setiap langkah membawamu menuju hal-hal yang lebih baik.</p>
+                </div>
+
+                <div class="message-card">
+                    <div>⭐</div>
+                    <h3>Dream Big</h3>
+                    <p>Jangan pernah berhenti bermimpi dan berusaha meraih cita-citamu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SURAT -->
+        <section class="section letter-section">
+            <div class="letter-card">
+                <div class="envelope">💌</div>
+                <h2>A Little Letter</h2>
+                <p>Ada pesan kecil yang ingin disampaikan...</p>
+
+                <button id="letterBtn" class="primary-btn">
+                    Buka Surat
+                </button>
+
+                <div id="letterContent" class="letter-content hidden">
+                    <p>
+                        Happy birthday, Queensha Islahul Azfa! ♡
+                        <br><br>
+                        Semoga di usia yang baru ini kamu selalu
+                        diberikan kebahagiaan, kesehatan, dan
+                        kemudahan dalam setiap urusan.
+                        <br><br>
+                        Teruslah menjadi pribadi yang baik,
+                        jangan takut mencoba hal baru, dan
+                        jangan lupa menikmati setiap proses
+                        dalam perjalananmu.
+                        <br><br>
+                        Wishing you all the best! 🎀
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KUE -->
+        <section id="surprise" class="section cake-section">
+            <div class="section-heading">
+                <span>MAKE A WISH</span>
+                <h2>Birthday Cake 🎂</h2>
+                <p>Jangan lupa buat satu harapan spesial!</p>
+            </div>
+
+            <div class="cake">
+                <div id="flame" class="flame">🔥</div>
+                <div class="candle"></div>
+                <div class="cake-top"></div>
+                <div class="cake-bottom"></div>
+            </div>
+
+            <button id="candleBtn" class="primary-btn">
+                Tiup Lilin 🕯️
+            </button>
+
+            <button id="wishBtn" class="secondary-btn">
+                Buat Harapan ✨
+            </button>
+
+            <p id="cakeMessage" class="cake-message"></p>
+        </section>
+
+        <!-- KEJUTAN TERAKHIR -->
+        <section class="final-section">
+            <div class="final-card">
+                <div class="final-decoration">🎁 ✨ 🎀</div>
+                <h2>One Last Surprise!</h2>
+                <p>Masih ada satu kejutan kecil untukmu.</p>
+
+                <button id="finalBtn" class="primary-btn">
+                    Buka Kejutan ♡
+                </button>
+
+                <div id="finalMessage" class="hidden final-message">
+                    <h2>Once Again, Happy Birthday! 🎉</h2>
+                    <p>
+                        Semoga hari ini menjadi salah satu
+                        hari yang indah untuk dikenang.
+                        Keep smiling and stay awesome! ♡
+                    </p>
+                    <div class="big-heart">💗</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Made with ♡ for Queensha Islahul Azfa</p>
+            <button id="backTopBtn" class="back-top">
+                ↑ Back to Top
+            </button>
+        </footer>
+
+    </main>
+
+</body>
+</html>
